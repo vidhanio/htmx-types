@@ -3,7 +3,8 @@
 use http::HeaderValue;
 use serde::{Deserialize, Serialize};
 
-mod headers;
+/// htmx headers which implement the [`headers_core::Header`] trait.
+pub mod headers;
 
 /// The hx-swap attribute allows you to specify how the response will be swapped in relative to the [target](https://htmx.org/attributes/hx-target/) of an AJAX request.
 ///

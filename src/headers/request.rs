@@ -1,3 +1,5 @@
+//! htmx request headers.
+
 use http::Uri;
 
 use super::{convert_header, define_header, string_header, true_header};
@@ -38,6 +40,6 @@ string_header! {
 }
 
 string_header! {
-    /// the `id`` of the triggered element if it exists
+    /// the `id` of the triggered element if it exists
     (HX_TRIGGER, HxTrigger, "hx-trigger")
 }

@@ -1,5 +1,5 @@
-mod request;
-mod response;
+pub mod request;
+pub mod response;
 
 macro_rules! define_header {
     {
@@ -11,6 +11,7 @@ macro_rules! define_header {
         pub static $STATIC: headers_core::HeaderName = headers_core::HeaderName::from_static($name_bytes);
 
         $(#[$docs])*
+        #[derive(Debug, Clone, PartialEq, Eq)]
         $($rest)*
     };
 }
@@ -24,6 +25,8 @@ macro_rules! true_header {
         define_header! {
             $(#[$docs])*
             ($STATIC, $name_bytes)
+
+            #[derive(Copy)]
             pub struct $UpCase;
         }
 
