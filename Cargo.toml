@@ -1,0 +1,34 @@
+[package]
+name = "htmx-types"
+
+categories = ["http", "web-programming"]
+description = "Types for working with htmx."
+edition = "2021"
+keywords = ["api", "htmx", "http", "types", "web"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/vidhanio/htmx-types"
+version = "0.1.0"
+
+[dependencies]
+headers-core = "0.3"
+http = "1"
+http-serde = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[lints]
+    [lints.rust]
+    missing_copy_implementations = "warn"
+    missing_debug_implementations = "warn"
+    missing_docs = "warn"
+    unsafe_code = "forbid"
+
+    [lints.clippy]
+    cargo = "warn"
+    nursery = "warn"
+    pedantic = "warn"
+
+    missing_errors_doc = "allow"
+    missing_panics_doc = "allow"
+    module_name_repetitions = "allow"
